@@ -1,0 +1,20 @@
+Different behaviour of PeriodFormatter
+PeriodFormatter pfmt2 = pfmtbuilder2.append(ISOPeriodFormat.standard() ).toFormatter(); is not the same as 
+PeriodFormatterBuilder pfmtbuilder1 = new PeriodFormatterBuilder()
+.appendLiteral("P")
+.appendYears()
+.appendSuffix("Y")
+.appendMonths()
+.appendSuffix("M")
+.appendWeeks()
+.appendSuffix("W")
+.appendDays()
+.appendSuffix("D")
+.appendSeparatorIfFieldsAfter("T")
+.appendHours()
+.appendSuffix("H")
+.appendMinutes()
+.appendSuffix("M")
+.appendSecondsWithOptionalMillis()
+.appendSuffix("S");
+which is copied from ISOPeriodFormat.standard() method
