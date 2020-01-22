@@ -3,9 +3,9 @@ import shutil
 import re
 
 projs = ['Time', 'Mockito', 'Lang', 'Math', 'Closure']
-linked_dir = 'linked-bugMethods/'
+linked_dir = 'linked-bugMethods-iBug/'
 linked_postfix = '_bugId_buggyMethodsName'
-bugcode_dir = 'allMethods'
+bugcode_dir = 'allMethods-iBug'
 br_dir = 'bugReport4Vector'
 
 def load_link_dic(path):
@@ -17,31 +17,8 @@ def load_link_dic(path):
         if len(line) > 0:
             parts = line.split('\t')
             br_id = parts[0]
-            pm_lists_str = parts[1].rstrip('\n')
-            pm_lists = pm_lists_str.split('外')
-            for pm_list in pm_lists:
-                pm_parts = pm_list.split('内')
-                if len(pm_parts) < 2:
-                    print(pm_parts, "in this sentence can not find PATH / METHOD_NAME !")
-                    continue
-                path =  '/'+'/'.join((pm_parts[0].split('/'))[2:])
-                method = pm_parts[1]
-
-                path_method = path + '#' + trim_method(trim_comma_in_paras(method))
-
-                if br_id not in dic:
-                    dic.setdefault(br_id, []).append(path_method)
-                else:
-                    dic[br_id].append(path_method)
+            dic[br_id] = 1
     return dic
-
-
-def trim_method(ori_method_str):
-    return re.sub(r'(@(\w+) )|(public )|(private )|(final )|(static )|(abstract )|(protected )|(synchronized )|(native )|(transient)|(volatie )|( throws(.*))', "", ori_method_str)
-
-
-def trim_comma_in_paras(method_str):
-    return re.sub(r'(,(\s*))', ',', method_str)
 
 
 def clear_allMethods():
