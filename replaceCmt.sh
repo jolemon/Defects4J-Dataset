@@ -4,7 +4,7 @@ rootDir=~/defects4j-dataset
 
 function replace(){
     file=$1
-    find ./ -name ${file} -type f | xargs -I {} sed -i '' 's/\/\*\*/\/\*/' {}
+    find ./ -name ${file} -type f | xargs -I {} sed -i 's/\/\*\*/\/\*/' {}
 } 
 
 cd ${rootDir}/allMethods/Math/
