@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rootDir=~/defects4j-dataset
+rootDir=~/en/defects4j-dataset
 
 function replace(){
     file=$1
