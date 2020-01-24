@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rootDir=~/phd_gogogo/final_defects4j
+rootDir=~/en/defects4j-dataset
 cd ${rootDir}/allMethods/Math/
 find ./ -name "TriDiagonalTransformer.java" -type f | xargs -I {} sed -i '' 's/\/\*\*/\/\*/' {}
 find ./ -name "HessenbergTransformer.java" -type f | xargs -I {} sed -i '' 's/\/\*\*/\/\*/' {}
