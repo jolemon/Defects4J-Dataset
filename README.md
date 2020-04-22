@@ -15,5 +15,5 @@ Defects4J includes "allMethods", "bugReport4Vector" and "linked-bugMethods"
   > It DOES NOT include "`.git`" directory.
 
 ## Instructions
-1. Download defects4j_tmpdir.tar.
+1. Download `defects4j_tmpdir.tar`.
 2. run `init.sh` to checkout all buggy version.
