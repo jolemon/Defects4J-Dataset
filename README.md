@@ -9,6 +9,7 @@ For the following reasons, some defects have been removed from the Defects4J dat
   > 2. Method is added but not modified or deleted in the buggy code version (In this case you cannot find the buggy method).
   > 3. The buggy method is constructor, which cannot be parsed by [code2vec](https://github.com/tech-srl/code2vec).
   > 4. The modified methods is innerclass of innerclass in the class (multinest) or override method in enum innerclass.  
+  > 5. JFreeChart is not included because only some defects in JFreeChart have corresponding bug reports.
 
 As a result, this Defects4J dataset consists of 5 Java projects, i.e. Closure compiler (156 defects), Apache commonsmath (85 defects), Apache commons-lang (56 defects), Joda-Time (23 defects) and Mockito (22 defects). 
 
