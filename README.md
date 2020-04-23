@@ -10,7 +10,7 @@ For the following reasons, some defects have been removed from the Defects4J dat
   > 3. The buggy method is constructor, which cannot be parsed by [code2vec](https://github.com/tech-srl/code2vec).
   > 4. The modified methods is innerclass of innerclass in the class (multinest) or override method in enum innerclass.  
 
-As a result, this Defects4J Dataset consists of 5 Java projects, i.e. Closure compiler (156 defects), Apache commonsmath (85 defects), Apache commons-lang (56 defects), Joda-Time (23 defects) and Mockito (22 defects). 
+As a result, this Defects4J dataset consists of 5 Java projects, i.e. Closure compiler (156 defects), Apache commonsmath (85 defects), Apache commons-lang (56 defects), Joda-Time (23 defects) and Mockito (22 defects). 
 
 Defects4J includes "allMethods", "bugReport4Vector" and "linked-bugMethods"
   > Note : Taking into account the storage size of the dataset, the Defects4J Dataset is not complete to run FineLocator. It includes:
@@ -22,5 +22,5 @@ Defects4J includes "allMethods", "bugReport4Vector" and "linked-bugMethods"
   > It DOES NOT include "`.git`" directory.
 
 ## Instructions
-1. Download `defects4j_tmpdir.tar`.
+1. Download `defects4j_tmpdir.tar` (get each project from [Defects4J](http://github.com/rjust/Defects4J)).
 2. run `init.sh` to checkout all buggy version.
