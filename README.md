@@ -22,6 +22,14 @@ For the following reasons, some defects have been removed from the Defects4J dat
 
 As a result, this Defects4J dataset consists of 5 Java projects, i.e. Closure compiler (156 defects), Apache commonsmath (85 defects), Apache commons-lang (56 defects), Joda-Time (23 defects) and Mockito (22 defects). 
 
+|          Project           | Defects num | Avg file num | Avg method num | Avg buggy method num |
+| :------------------------: | :---------: | :----------: | :------------: | :------------------: |
+| Closure compiler (Closure) |     156     |    387.69    |    5662.25     |         1.64         |
+| Apache commons-math (Math) |     85      |    497.79    |    3326.40     |         1.38         |
+| Apache commons-lang (Lang) |     56      |    89.34     |    1868.96     |         1.23         |
+|          Mockito           |     22      |    278.36    |     992.05     |         2.55         |
+|      Joda-Time (Time)      |     23      |    156.35    |    3099.52     |         1.96         |
+
 Defects4J includes "allMethods", "bugReport4Vector" and "linked-bugMethods"
   > Note : Taking into account the storage size of the dataset, the Defects4J Dataset is not complete to run FineLocator. It includes:
   >
