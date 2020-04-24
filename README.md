@@ -3,10 +3,19 @@
 ## Description
 
 [Defects4J](http://github.com/rjust/Defects4J) dataset (version==1.5.0), consists of 6 open source Java projects with a total of 438 defects, including Closure compiler (176 defects), Apache commonsmath (106 defects), Apache commons-lang (65 defects), Mockito (38 defects), Joda-Time (27 defects) and JFreeChart (26 defects).
+For each bug within the Defects4J dataset, the maintainers of Defects4J manually removed all code modifications that are not relevant to fixing the bug. This guarantees that methods with modifications are truly buggy methods related to a bug. 
+
+Despite Defects4J provides the buggy code version and fixed code version for each bug, it does not explicitly mark the exact methods that are changed to fix a bug.
+Hence, to evaluate our method-level bug localization technique, we need to construct a dataset where each bug report is linked to its corresponding buggy methods.
+
+We take a two-step way to help us obtain such a dataset.
+Specifically, for each bug, we first use git difftool and [MELD](https://meldmerge.org/) to graphically present the difference between its fixed code version and buggy code version.
+Then we manually checked the code modifications, and take all methods involved in code modifications as buggy methods.
+Other unchanged methods in the buggy version are regarded as non-buggy methods.
 
 For the following reasons, some defects have been removed from the Defects4J dataset (version==1.5.0) to build the dataset in our experiment (BLESER and FineLocator):
   > 1. No corresponding modification to the methods.
-  > 2. Method is added but not modified or deleted in the buggy code version (In this case you cannot find the buggy method).
+  > 2. Method newly added but not modified or deleted in the buggy code version (In this case you cannot find the buggy method).
   > 3. The buggy method is constructor, which cannot be parsed by [code2vec](https://github.com/tech-srl/code2vec).
   > 4. The modified methods is innerclass of innerclass in the class (multinest) or override method in enum innerclass.  
   > 5. JFreeChart is not included because only some defects in JFreeChart have corresponding bug reports.
