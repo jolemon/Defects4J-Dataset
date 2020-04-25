@@ -42,7 +42,7 @@ Math_49	Math/Math_49/src/main/java/org/apache/commons/math/linear/OpenMapRealVec
 Math_52	Math/Math_52/src/main/java/org/apache/commons/math/geometry/euclidean/threed/Rotation.java内Rotation#Rotation(Vector3D u1, Vector3D u2, Vector3D v1, Vector3D v2)
 Math_53	Math/Math_53/src/main/java/org/apache/commons/math/complex/Complex.java内Complex#Complex add(Complex rhs)
 Math_54	Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java内Dfp#Dfp(final DfpField field, double x)外Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java内Dfp#double toDouble()
-Math_55	Math/Math_55/src/main/java/org/apache/commons/math/geometry/Vector3D.java内Vector3D#Vector3D crossProduct(final Vector3D v1, final Vector3D v2)
+Math_55	Math/Math_55/src/main/java/org/apache/commons/math/geometry/Vector3D.java内Vector3D#Vector3D crossProduct(Vector3D v1, Vector3D v2)
 Math_56	Math/Math_56/src/main/java/org/apache/commons/math/util/MultidimensionalCounter.java内MultidimensionalCounter#int[] getCounts(int index)
 Math_57	Math/Math_57/src/main/java/org/apache/commons/math/stat/clustering/KMeansPlusPlusClusterer.java内KMeansPlusPlusClusterer#List<Cluster<T>> chooseInitialCenters(final Collection<T> points, final int k, final Random random)
 Math_58	Math/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java内GaussianFitter#double[] fit()
